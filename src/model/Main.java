@@ -56,12 +56,14 @@ public class Main {
                         case "1" -> {
                             System.out.println("--- Ingreso de Fruta ---");
                             // METODO INGRESO FRUTA
+                            Funcion.agregarFruta(List<Alimento> listaAlimento);
 
                         }
 
                         case "2" -> {
                             System.out.println("--- Ingreso de Verdura ---");
                             // METODO INGRESO VERDURA
+                            Funcion.agregarVerdura(List<Alimento> listaAlimento);
                         }
 
                         default -> System.out.println("Ingrese una opcion valida (1 o 2)");
@@ -70,10 +72,17 @@ public class Main {
                 }
 
 
-                case "2" -> System.out.println("--- Listar Alimentos ---");
+                case "2" -> {
+                    System.out.println("--- Listar Alimentos ---");
+                    Funcion.listarAlimentos(List<Alimento> listaAlimento);
+                }
 
 
-                case "3" -> System.out.println("--- Buscar Alimentos ---");
+
+                case "3" -> {
+                    System.out.println("--- Buscar Alimentos ---");
+                    Funcion.buscarAlimento(List<Alimento>);
+                }
 
 
                 case "4" -> {
@@ -92,20 +101,4 @@ public class Main {
 
     }
 
-    private static void agregarFruta(Scanner scanner){
-        System.out.println("Ingrese: ");
-        System.out.println("ID del Alimento: ");
-        int idAlimento = scanner.nextInt();
-
-        System.out.println("Nombre del producto: ");
-        String nombreProducto = scanner.nextLine();
-
-        System.out.println();
-
-
-
-
-        Fruta nuevaFruta = new Fruta(idAlimento, nombreProducto, precioUnitario, stockDisponible, paisOrigen, temporadaCultivo);
-
-    }
 }

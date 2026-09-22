@@ -78,16 +78,17 @@ public class Funcion {
     }
 
     public static void buscarAlimento(List<Alimento> listaAlimentos, Scanner scanner) {
-        System.out.print("Ingrese nombre a buscar: ");
-        String busqueda = scanner.nextLine();
+        System.out.print("Ingrese ID del alimento a buscar: ");
+        int busquedaId = Integer.parseInt(scanner.nextLine());
 
         for (Alimento alimento : listaAlimentos) {
-            if (alimento.getNombre().equalsIgnoreCase(busqueda)) {
+            // Se usa el getter y la comparación directa de enteros con '=='
+            if (alimento.getIdAlimento() == busquedaId) {
                 System.out.println("Encontrado -> " + alimento);
                 return;
             }
         }
-        System.out.println("No se encontró ningún alimento con ese nombre.");
+        System.out.println("No se encontró ningún alimento con ese ID.");
     }
 }
 

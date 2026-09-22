@@ -8,6 +8,7 @@ abstract class Alimento {
 
     // CONSTRUCTORES
     //-------------------
+
     public Alimento(int idAlimento, String nombreProducto, int precioUnitario, int stockDisponible) {
         this.idAlimento = idAlimento;
         this.nombreProducto = nombreProducto;

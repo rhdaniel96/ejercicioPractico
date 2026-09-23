@@ -40,24 +40,20 @@ public class Main {
 
                     switch (opAlimento) {
                         case "1" -> {
-                            System.out.println("--- Ingreso de Fruta ---");
-                            // Se envían las variables listaAlimento y scanner
+                            // Se llama funcion agregar fruta
                             Funcion.agregarFruta(listaAlimento, scanner);
                         }
                         case "2" -> {
-                            System.out.println("--- Ingreso de Verdura ---");
-                            // Se envían las variables listaAlimento y scanner
+                            // Se llama funcion agregar verdura
                             Funcion.agregarVerdura(listaAlimento, scanner);
                         }
                         default -> System.out.println("Ingrese una opcion valida (1 o 2)");
                     }
                 }
                 case "2" -> {
-                    System.out.println("--- Listar Alimentos ---");
                     Funcion.listarAlimentos(listaAlimento);
                 }
                 case "3" -> {
-                    System.out.println("--- Buscar Alimentos ---");
                     Funcion.buscarAlimento(listaAlimento, scanner);
                 }
                 case "4" -> {

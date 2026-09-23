@@ -45,17 +45,19 @@ public class Funcion {
         int stockDisponible = Integer.parseInt(scanner.nextLine());
 
         System.out.print("¿Es orgánica? (S/N): ");
-        String opcionOrganica = scanner.nextLine().trim().toUpperCase();
+        String opcionOrganica = scanner.nextLine().strip().toUpperCase();
 
         // Validación de entrada
         while (!opcionOrganica.equals("S") && !opcionOrganica.equals("N")) {
             System.out.println("Opción inválida. Intente nuevamente.");
             System.out.print("¿Es orgánica? (S/N): ");
-            opcionOrganica = scanner.nextLine().trim().toUpperCase();
+            opcionOrganica = scanner.nextLine().strip().toUpperCase();
         }
 
         // Conversión a valor booleano
-        boolean esOrganica = opcionOrganica.equals("S");
+        boolean esOrganica = opcionOrganica.equals("S"); // Aqui evaluamos la respuesta del usuario
+        // con .equals("S") evaluamos el caso de que el usario conteste S y se asignaria true
+        // En caso contrario se asignaria false
 
         System.out.print("Ingrese contenido nutricional: ");
         String contenidoNutricional = scanner.nextLine();
@@ -78,6 +80,7 @@ public class Funcion {
     }
 
     public static void buscarAlimento(List<Alimento> listaAlimentos, Scanner scanner) {
+        System.out.println(" --- Buscar Alimento ---");
         System.out.print("Ingrese ID del alimento a buscar: ");
         int busquedaId = Integer.parseInt(scanner.nextLine());
 

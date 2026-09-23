@@ -38,13 +38,20 @@ public final class Verdura extends Alimento {
 
     @Override
     public String toString() {
-        return "Verdura{" +
-                "esOrganica=" + esOrganica +
-                ", contenidoNutricional='" + contenidoNutricional + '\'' +
-                ", idAlimento=" + idAlimento +
-                ", nombreProducto='" + nombreProducto + '\'' +
-                ", precioUnitario=" + precioUnitario +
-                ", stockDisponible=" + stockDisponible +
-                '}';
+        return """
+                Verdura:
+                -ID del Alimento: %s
+                -Nombre del Producto: %s
+                -Precio Unitario: %s
+                -Stock Disponible: %s
+                -Organica: %s
+                -Contenido Nutricional: %s
+                """.formatted(
+                        idAlimento,
+                        nombreProducto,
+                        precioUnitario,
+                        stockDisponible,
+                        esOrganica ? "Si" : "No",
+                        contenidoNutricional);
     }
 }

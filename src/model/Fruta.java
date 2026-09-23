@@ -33,13 +33,20 @@ public final class Fruta extends Alimento{
 
     @Override
     public String toString() {
-        return "Fruta{" +
-                "paisOrigen='" + paisOrigen + '\'' +
-                ", temporadaCultivo='" + temporadaCultivo + '\'' +
-                ", idAlimento=" + idAlimento +
-                ", nombreProducto='" + nombreProducto + '\'' +
-                ", precioUnitario=" + precioUnitario +
-                ", stockDisponible=" + stockDisponible +
-                '}';
+        return """
+                Fruta:
+                -ID del Alimento: %s
+                -Nombre del Producto: %s
+                -Precio Unitario: %s
+                -Stock Disponible: %s
+                -Pais de Origen: %s
+                -Temporada de Cultivo: %s
+                """.formatted(
+                        idAlimento,
+                        nombreProducto,
+                        precioUnitario,
+                        stockDisponible,
+                        paisOrigen,
+                        temporadaCultivo);
     }
 }

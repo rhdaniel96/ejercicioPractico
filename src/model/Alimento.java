@@ -1,6 +1,6 @@
 package model;
 
-abstract class Alimento {
+public abstract class Alimento {
     public int idAlimento;
     public String nombreProducto;
     public int precioUnitario;

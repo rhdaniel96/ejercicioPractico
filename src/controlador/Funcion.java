@@ -1,4 +1,8 @@
-package model;
+package controlador;
+
+import model.Alimento;
+import model.Fruta;
+import model.Verdura;
 
 import java.util.List;
 import java.util.Scanner;
